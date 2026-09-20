@@ -47,10 +47,18 @@
            SCREEN 1: FEED VIDEO (TIKTOK MULTI-POST SCROLL SNAP)
       =============================================== -->
       <section class="screen active" id="screen-feed">
-        <!-- Feed Top Bar: Guest Status, Centered Tabs, Language Toggle -->
+        <!-- Feed Top Bar: Live, Centered Tabs, Language Toggle -->
         <div class="feed-header">
-          <div class="feed-guest-chip" id="feed-guest-chip">
-            <span id="guest-chip-text">👤 Khách</span> <span class="login-link">Đăng nhập</span>
+          <div class="feed-header-left">
+            <button class="feed-live-btn" id="feed-live-btn" title="Live">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
+                <path d="M7.76 7.76a6 6 0 0 0 0 8.48"/>
+                <circle cx="12" cy="12" r="2"/>
+                <path d="M16.24 7.76a6 6 0 0 0 0 8.48"/>
+                <path d="M19.07 4.93a10 10 0 0 0 0 14.14"/>
+              </svg>
+            </button>
           </div>
 
           <div class="feed-tabs-center">
@@ -95,35 +103,15 @@
            SCREEN 2: RANDOM VOICE MATCHING (LITMATCH STYLE)
       =============================================== -->
       <section class="screen" id="screen-match">
-        <!-- 1. GUEST LOCK STATE (SHOWN WHEN NOT LOGGED IN) -->
+        <!-- 1. GUEST EMPTY STATE (SHOWN WHEN NOT LOGGED IN) -->
         <div class="match-guest-view" id="match-guest-view">
-          <div class="match-lock-icon-outer">
-            <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <div class="guest-state-icon match-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.09-.6-.39-1.14-1-1.14z"/></svg>
           </div>
-          <span class="guest-lock-badge" id="match-guest-badge">Chưa đăng nhập</span>
-          <h3 class="match-guest-title" id="match-guest-title">Ghép Đôi Thoại Ngẫu Nhiên</h3>
-          <p class="match-guest-subtitle" id="match-guest-subtitle">
-            Đăng nhập số điện thoại Angola (+244) để bắt đầu tìm kiếm bạn bè và kết nối thoại tức thì không lộ mặt.
-          </p>
-
-          <div class="guest-benefits-box">
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="match-benefit-1">5 lượt gọi thoại miễn phí mỗi ngày</span>
-            </div>
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="match-benefit-2">Lọc theo giới tính & độ tuổi tại Luanda</span>
-            </div>
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="match-benefit-3">Follow chéo trong 3 phút để mở khóa Chat</span>
-            </div>
-          </div>
-
-          <button class="match-guest-login-btn" id="match-guest-login-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
-            <span id="match-guest-btn-text">Đăng nhập để Ghép Đôi</span>
+          <h3 class="guest-state-title" id="match-guest-title">Ghép Đôi Thoại Ngẫu Nhiên</h3>
+          <p class="guest-state-desc" id="match-guest-subtitle">Kết nối trò chuyện thoại tức thì không lộ mặt với bạn bè mới.</p>
+          <button class="guest-state-cta-btn match-btn" id="match-guest-login-btn">
+            <span id="match-guest-btn-text">Bắt đầu ngay</span>
           </button>
         </div>
 
@@ -254,35 +242,15 @@
            SCREEN 4: CHAT 1-1 (WHATSAPP STYLE)
       =============================================== -->
       <section class="screen" id="screen-chat">
-        <!-- 1. GUEST LOCK STATE (SHOWN WHEN NOT LOGGED IN) -->
+        <!-- 1. GUEST EMPTY STATE (SHOWN WHEN NOT LOGGED IN) -->
         <div class="chat-guest-view" id="chat-guest-view">
-          <div class="chat-lock-icon-outer">
-            <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <div class="guest-state-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg>
           </div>
-          <span class="guest-lock-badge" id="chat-guest-badge">Chưa đăng nhập</span>
-          <h3 class="chat-guest-title" id="chat-guest-title">Tin Nhắn & Bạn Bè</h3>
-          <p class="chat-guest-subtitle" id="chat-guest-subtitle">
-            Bạn chưa đăng nhập. Đăng nhập và ghép đôi thoại để mở khóa trò chuyện 1-1 và gửi tin nhắn thoại với bạn bè Angola.
-          </p>
-
-          <div class="guest-benefits-box">
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="chat-benefit-1">Nhắn tin không giới hạn với bạn bè đã Follow</span>
-            </div>
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="chat-benefit-2">Gửi tin nhắn thoại âm thanh chất lượng cao</span>
-            </div>
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="chat-benefit-3">Gọi thoại trực tiếp 1 chạm từ khung chat</span>
-            </div>
-          </div>
-
-          <button class="chat-guest-login-btn" id="chat-guest-login-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
-            <span id="chat-guest-btn-text">Đăng nhập để Mở Tin Nhắn</span>
+          <h3 class="guest-state-title" id="chat-guest-title">Đăng nhập vào TikMatch</h3>
+          <p class="guest-state-desc" id="chat-guest-subtitle">Xem tin nhắn từ bạn bè và các thông báo mới nhất.</p>
+          <button class="guest-state-cta-btn" id="chat-guest-login-btn">
+            <span id="chat-guest-btn-text">Đăng nhập</span>
           </button>
         </div>
 
@@ -422,35 +390,15 @@
           </div>
         </div>
 
-        <!-- 1. GUEST STATE (WHEN NOT LOGGED IN) -->
+        <!-- 1. GUEST EMPTY STATE (WHEN NOT LOGGED IN) -->
         <div class="guest-profile-view" id="profile-guest-view">
-          <div class="guest-avatar-outer">
+          <div class="guest-state-icon profile-icon">
             <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
           </div>
-          <span class="guest-badge-pill" id="guest-badge">Chưa đăng nhập</span>
-          <h3 class="guest-title" id="guest-title">Khách Trải Nghiệm</h3>
-          <p class="guest-subtitle" id="guest-subtitle">
-            Bạn đang xem video ở Chế độ Khách. Đăng nhập để mở khóa gọi thoại, nhắn tin và nhận Tích Xanh!
-          </p>
-
-          <div class="guest-benefits-box">
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="guest-benefit-1">Gọi thoại ngẫu nhiên kết nối tức thì tại Angola</span>
-            </div>
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="guest-benefit-2">Mở khóa nhắn tin 1-1 không giới hạn khi follow</span>
-            </div>
-            <div class="benefit-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span id="guest-benefit-3">Đăng video ngắn và xét duyệt Tích Xanh chính chủ</span>
-            </div>
-          </div>
-
-          <button class="guest-login-cta-btn" id="guest-login-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
-            <span id="guest-login-btn-text">Đăng ký / Đăng nhập (OTP +244 Angola)</span>
+          <h3 class="guest-state-title" id="guest-title">Hồ sơ của bạn</h3>
+          <p class="guest-state-desc" id="guest-subtitle">Đăng nhập để theo dõi các nhà sáng tạo và chia sẻ video.</p>
+          <button class="guest-state-cta-btn" id="guest-login-btn">
+            <span id="guest-login-btn-text">Đăng nhập</span>
           </button>
         </div>
 

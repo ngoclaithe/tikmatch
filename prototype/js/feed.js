@@ -19,16 +19,6 @@ export function initFeed(toastCallback, onLoginTrigger) {
 
 export function updateFeedGuestState(isLoggedIn) {
   isUserLoggedIn = isLoggedIn;
-  const chip = document.getElementById('feed-guest-chip');
-  if (!chip) return;
-
-  if (isLoggedIn) {
-    chip.classList.add('logged-in');
-    chip.innerHTML = `<span>Sara 🇦🇴</span>`;
-  } else {
-    chip.classList.remove('logged-in');
-    chip.innerHTML = `<span id="guest-chip-text">${getText('guestChip')}</span> <span class="login-link">${getText('guestChipAction')}</span>`;
-  }
 }
 
 /**
@@ -131,11 +121,13 @@ function bindFeedEvents() {
   const container = document.getElementById('feed-scroll-container');
   if (!container) return;
 
-  // Guest Chip Click -> Trigger Login Modal
-  const guestChip = document.getElementById('feed-guest-chip');
-  if (guestChip) {
-    guestChip.addEventListener('click', () => {
-      if (loginTriggerCallback) loginTriggerCallback();
+  // Live Button Click
+  const liveBtn = document.getElementById('feed-live-btn');
+  if (liveBtn) {
+    liveBtn.addEventListener('click', () => {
+      if (!isUserLoggedIn && loginTriggerCallback) {
+        loginTriggerCallback();
+      }
     });
   }
 

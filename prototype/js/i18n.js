@@ -30,14 +30,10 @@ export const translations = {
     startMatching: "Bắt đầu Tìm kiếm Ngẫu nhiên",
     connectingStatus: "Đang kết nối...",
     
-    // Screen 2: Match Guest Lock
-    matchGuestBadge: "Chưa đăng nhập",
+    // Screen 2: Match Guest State
     matchGuestTitle: "Ghép Đôi Thoại Ngẫu Nhiên",
-    matchGuestSubtitle: "Đăng nhập số điện thoại Angola (+244) để bắt đầu tìm kiếm bạn bè và kết nối thoại tức thì không lộ mặt.",
-    matchBenefit1: "5 lượt gọi thoại miễn phí mỗi ngày",
-    matchBenefit2: "Lọc theo giới tính & độ tuổi tại Luanda",
-    matchBenefit3: "Follow chéo trong 3 phút để mở khóa Chat",
-    matchGuestBtn: "Đăng nhập để Ghép Đôi",
+    matchGuestSubtitle: "Kết nối trò chuyện thoại tức thì không lộ mặt với bạn bè mới.",
+    matchGuestBtn: "Bắt đầu ngay",
 
     // Screen 3: Call
     callingTitle: "Cuộc gọi thoại ngẫu nhiên",
@@ -54,23 +50,15 @@ export const translations = {
     directNotice: "Hai bạn đã theo dõi chéo qua cuộc gọi thoại ngẫu nhiên",
     typeMessage: "Nhắn tin...",
 
-    // Screen 4: Chat Guest Lock
-    chatGuestBadge: "Chưa đăng nhập",
-    chatGuestTitle: "Tin Nhắn & Bạn Bè",
-    chatGuestSubtitle: "Bạn chưa đăng nhập. Đăng nhập và ghép đôi thoại để mở khóa trò chuyện 1-1 và gửi tin nhắn thoại với bạn bè Angola.",
-    chatBenefit1: "Nhắn tin không giới hạn với bạn bè đã Follow",
-    chatBenefit2: "Gửi tin nhắn thoại âm thanh chất lượng cao",
-    chatBenefit3: "Gọi thoại trực tiếp 1 chạm từ khung chat",
-    chatGuestBtn: "Đăng nhập để Mở Tin Nhắn",
+    // Screen 4: Chat Guest State
+    chatGuestTitle: "Đăng nhập vào TikMatch",
+    chatGuestSubtitle: "Xem tin nhắn từ bạn bè và các thông báo mới nhất.",
+    chatGuestBtn: "Đăng nhập",
 
     // Screen 5: Guest Profile
-    guestTitle: "Khách Trải Nghiệm",
-    guestBadge: "Chưa đăng nhập",
-    guestSubtitle: "Bạn đang xem video ở Chế độ Khách. Đăng nhập để mở khóa gọi thoại, nhắn tin và nhận Tích Xanh!",
-    guestBenefit1: "Gọi thoại ngẫu nhiên kết nối tức thì tại Angola",
-    guestBenefit2: "Mở khóa nhắn tin 1-1 không giới hạn khi follow",
-    guestBenefit3: "Đăng video ngắn và xét duyệt Tích Xanh chính chủ",
-    guestLoginBtn: "Đăng ký / Đăng nhập (OTP +244 Angola)",
+    guestTitle: "Hồ sơ của bạn",
+    guestSubtitle: "Đăng nhập để theo dõi các nhà sáng tạo và chia sẻ video.",
+    guestLoginBtn: "Đăng nhập",
     logoutBtn: "Đăng xuất",
 
     // Screen 5: User Profile
@@ -119,14 +107,10 @@ export const translations = {
     startMatching: "Começar Conexão Aleatória",
     connectingStatus: "A conectar...",
 
-    // Screen 2: Match Guest Lock
-    matchGuestBadge: "Não Registado",
-    matchGuestTitle: "Conexão de Voz Aleatória",
-    matchGuestSubtitle: "Inicie sessão com telemóvel de Angola (+244) para conversar com novas pessoas por voz instantaneamente.",
-    matchBenefit1: "5 chamadas grátis de 3 minutos por dia",
-    matchBenefit2: "Filtros de gênero e idade em Luanda",
-    matchBenefit3: "Sigam-se na chamada para desbloquear Chat",
-    matchGuestBtn: "Entrar para Conectar",
+    // Screen 2: Match Guest State
+    matchGuestTitle: "Ligação de Voz Aleatória",
+    matchGuestSubtitle: "Converse por voz com novas pessoas sem mostrar o rosto.",
+    matchGuestBtn: "Começar agora",
 
     // Screen 3: Call
     callingTitle: "Chamada de Voz em Direto",
@@ -143,23 +127,15 @@ export const translations = {
     directNotice: "Vocês se seguiram mutuamente na chamada de voz",
     typeMessage: "Mensagem...",
 
-    // Screen 4: Chat Guest Lock
-    chatGuestBadge: "Não Registado",
-    chatGuestTitle: "Mensagens & Amigos",
-    chatGuestSubtitle: "Sessão não iniciada. Inicie sessão e conecte-se na chamada de voz para conversar e enviar áudios.",
-    chatBenefit1: "Mensagens ilimitadas com quem você segue",
-    chatBenefit2: "Envio de mensagens de áudio em alta definição",
-    chatBenefit3: "Chamada direta com 1 toque na conversa",
-    chatGuestBtn: "Entrar para Ver Mensagens",
+    // Screen 4: Chat Guest State
+    chatGuestTitle: "Entrar no TikMatch",
+    chatGuestSubtitle: "Veja as mensagens dos seus amigos e notificações recentes.",
+    chatGuestBtn: "Entrar",
 
     // Screen 5: Guest Profile
-    guestTitle: "Perfil de Convidado",
-    guestBadge: "Não Registado",
-    guestSubtitle: "Estás a assistir como Convidado. Cria uma conta para falar com pessoas em Angola!",
-    guestBenefit1: "Chamadas de voz aleatórias instantâneas em Luanda",
-    guestBenefit2: "Chat direto ilimitado após se seguirem",
-    guestBenefit3: "Publica vídeos curtos e solicita o Selo Oficial",
-    guestLoginBtn: "Criar Conta / Entrar (OTP +244)",
+    guestTitle: "O seu perfil",
+    guestSubtitle: "Inicie sessão para seguir criadores e partilhar vídeos.",
+    guestLoginBtn: "Entrar",
     logoutBtn: "Sair",
 
     // Screen 5: User Profile
@@ -248,20 +224,12 @@ export function updateTexts() {
   if (pillMale) pillMale.textContent = dict.genderMale;
   if (startBtnText) startBtnText.textContent = dict.startMatching;
 
-  // Screen 2: Match Guest Lock
-  const matchGuestBadge = document.getElementById('match-guest-badge');
+  // Screen 2: Match Guest State
   const matchGuestTitle = document.getElementById('match-guest-title');
   const matchGuestSubtitle = document.getElementById('match-guest-subtitle');
-  const matchBenefit1 = document.getElementById('match-benefit-1');
-  const matchBenefit2 = document.getElementById('match-benefit-2');
-  const matchBenefit3 = document.getElementById('match-benefit-3');
   const matchGuestBtnText = document.getElementById('match-guest-btn-text');
-  if (matchGuestBadge) matchGuestBadge.textContent = dict.matchGuestBadge;
   if (matchGuestTitle) matchGuestTitle.textContent = dict.matchGuestTitle;
   if (matchGuestSubtitle) matchGuestSubtitle.textContent = dict.matchGuestSubtitle;
-  if (matchBenefit1) matchBenefit1.textContent = dict.matchBenefit1;
-  if (matchBenefit2) matchBenefit2.textContent = dict.matchBenefit2;
-  if (matchBenefit3) matchBenefit3.textContent = dict.matchBenefit3;
   if (matchGuestBtnText) matchGuestBtnText.textContent = dict.matchGuestBtn;
 
   // Screen 3: Call
@@ -287,38 +255,24 @@ export function updateTexts() {
   if (directNotice) directNotice.textContent = dict.directNotice;
   if (chatMsgInput) chatMsgInput.placeholder = dict.typeMessage;
 
-  // Screen 4: Chat Guest Lock
-  const chatGuestBadge = document.getElementById('chat-guest-badge');
+  // Screen 4: Chat Guest State
   const chatGuestTitle = document.getElementById('chat-guest-title');
   const chatGuestSubtitle = document.getElementById('chat-guest-subtitle');
-  const chatBenefit1 = document.getElementById('chat-benefit-1');
-  const chatBenefit2 = document.getElementById('chat-benefit-2');
-  const chatBenefit3 = document.getElementById('chat-benefit-3');
   const chatGuestBtnText = document.getElementById('chat-guest-btn-text');
-  if (chatGuestBadge) chatGuestBadge.textContent = dict.chatGuestBadge;
   if (chatGuestTitle) chatGuestTitle.textContent = dict.chatGuestTitle;
   if (chatGuestSubtitle) chatGuestSubtitle.textContent = dict.chatGuestSubtitle;
-  if (chatBenefit1) chatBenefit1.textContent = dict.chatBenefit1;
-  if (chatBenefit2) chatBenefit2.textContent = dict.chatBenefit2;
-  if (chatBenefit3) chatBenefit3.textContent = dict.chatBenefit3;
   if (chatGuestBtnText) chatGuestBtnText.textContent = dict.chatGuestBtn;
 
   // Screen 5: Profile (Guest + User)
   const guestTitle = document.getElementById('guest-title');
-  const guestBadge = document.getElementById('guest-badge');
   const guestSubtitle = document.getElementById('guest-subtitle');
-  const guestBenefit1 = document.getElementById('guest-benefit-1');
-  const guestBenefit2 = document.getElementById('guest-benefit-2');
-  const guestBenefit3 = document.getElementById('guest-benefit-3');
   const guestLoginBtn = document.getElementById('guest-login-btn');
+  const guestLoginBtnText = document.getElementById('guest-login-btn-text');
   const logoutBtn = document.getElementById('logout-btn');
   if (guestTitle) guestTitle.textContent = dict.guestTitle;
-  if (guestBadge) guestBadge.textContent = dict.guestBadge;
   if (guestSubtitle) guestSubtitle.textContent = dict.guestSubtitle;
-  if (guestBenefit1) guestBenefit1.textContent = dict.guestBenefit1;
-  if (guestBenefit2) guestBenefit2.textContent = dict.guestBenefit2;
-  if (guestBenefit3) guestBenefit3.textContent = dict.guestBenefit3;
-  if (guestLoginBtn) guestLoginBtn.textContent = dict.guestLoginBtn;
+  if (guestLoginBtnText) guestLoginBtnText.textContent = dict.guestLoginBtn;
+  else if (guestLoginBtn) guestLoginBtn.textContent = dict.guestLoginBtn;
   if (logoutBtn) logoutBtn.textContent = dict.logoutBtn;
 
   const verifyCardTitle = document.getElementById('verify-card-title');

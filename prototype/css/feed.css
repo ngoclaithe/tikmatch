@@ -18,44 +18,33 @@
   justify-content: space-between;
   align-items: center;
   z-index: 40;
-  padding: 0 12px;
-  height: 38px;
+  padding: 0 16px;
+  height: 42px;
   pointer-events: auto;
 }
 
-/* Left Guest Chip */
-.feed-guest-chip {
+/* Left Header Space / Live Icon (Matches TikTok UI) */
+.feed-header-left {
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-border-light);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #fff;
+  width: 54px;
+}
+
+.feed-live-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: opacity 0.2s ease;
 }
 
-.feed-guest-chip:hover {
-  background: rgba(254, 44, 85, 0.3);
-  border-color: var(--primary-pink);
-}
-
-.feed-guest-chip .login-link {
-  color: var(--primary-pink);
-  text-decoration: underline;
-  margin-left: 2px;
-}
-
-.feed-guest-chip.logged-in {
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.4);
-  color: var(--accent-green);
+.feed-live-btn:active {
+  opacity: 0.6;
 }
 
 .feed-tabs-center {
