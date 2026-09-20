@@ -1,0 +1,571 @@
+/* ========================================================
+   SCREEN 5: PROFILE & VERIFIED BADGE (ID UPLOAD)
+======================================================== */
+#screen-profile {
+  background: #08090e;
+  padding: 44px 16px 16px 16px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.profile-top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.profile-app-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-action-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-action-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.logout-link-btn {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* ========================================================
+   GUEST PROFILE VIEW (WHEN NOT LOGGED IN)
+======================================================== */
+.guest-profile-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.guest-avatar-outer {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: #141724;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.guest-avatar-outer svg {
+  width: 40px;
+  height: 40px;
+  fill: #64748b;
+}
+
+.guest-badge-pill {
+  background: rgba(254, 44, 85, 0.15);
+  border: 1px solid rgba(254, 44, 85, 0.35);
+  color: var(--primary-pink);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.guest-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.guest-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  max-width: 280px;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+/* Guest Features Checklist */
+.guest-benefits-box {
+  width: 100%;
+  background: rgba(22, 25, 38, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.74rem;
+  color: #cbd5e1;
+}
+
+.benefit-item svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-cyan);
+  flex-shrink: 0;
+}
+
+.guest-login-cta-btn {
+  width: 100%;
+  background: var(--gradient-tik);
+  border: none;
+  border-radius: 16px;
+  padding: 13px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(254, 44, 85, 0.45);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.guest-login-cta-btn:active {
+  transform: scale(0.97);
+}
+
+/* ========================================================
+   USER PROFILE VIEW (WHEN LOGGED IN)
+======================================================== */
+.user-profile-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.profile-avatar-outer {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--gradient-tik);
+  box-shadow: 0 4px 18px rgba(254, 44, 85, 0.35);
+  margin-bottom: 8px;
+}
+
+.profile-avatar-outer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #08090e;
+}
+
+.profile-full-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.verified-icon-gold {
+  width: 17px;
+  height: 17px;
+  fill: var(--accent-gold);
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6));
+}
+
+.profile-handle {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.profile-bio {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  max-width: 290px;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+/* Verification Status Banner (Chị Sara yêu cầu) */
+.verification-badge-card {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.05) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 16px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.verification-badge-card:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+}
+
+.verify-card-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verify-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verify-icon-box svg {
+  width: 16px;
+  height: 16px;
+  fill: #000;
+}
+
+.verify-text-info h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fde68a;
+}
+
+.verify-text-info p {
+  font-size: 0.62rem;
+  color: var(--text-secondary);
+}
+
+.verify-action-pill {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Profile Counters */
+.profile-stats-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 12px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.stat-title {
+  font-size: 0.62rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Video Grid Tabs */
+.grid-tabs-bar {
+  display: flex;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 8px;
+}
+
+.grid-tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.grid-tab-btn.active {
+  color: #fff;
+  border-bottom-color: var(--primary-pink);
+}
+
+.profile-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  padding-bottom: 20px;
+}
+
+.video-grid-thumb {
+  position: relative;
+  aspect-ratio: 9/16;
+  background: #161822;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-grid-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.video-grid-thumb:hover img {
+  transform: scale(1.05);
+}
+
+.video-views-badge {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* ========================================================
+   MODALS: AUTHENTICATION OTP & VERIFICATION UPLOAD
+======================================================== */
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(12px);
+  z-index: 95;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  width: 100%;
+  background: #141724;
+  border: 1px solid var(--glass-border-light);
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  animation: modalPop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Auth Modal Specifics (Angola +244 OTP) */
+.auth-input-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.country-prefix-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.auth-text-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 0.78rem;
+  outline: none;
+}
+
+.auth-otp-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.otp-digit-box {
+  flex: 1;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-submit-btn {
+  background: var(--gradient-tik);
+  border: none;
+  border-radius: 14px;
+  padding: 11px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-demo-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 8px;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-demo-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Upload Dropzone */
+.upload-dropzone {
+  border: 2px dashed rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.04);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.upload-dropzone:hover {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.upload-dropzone svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--accent-gold);
+}
+
+.dropzone-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dropzone-hint {
+  font-size: 0.62rem;
+  color: var(--text-secondary);
+}
+
+.submit-verify-btn {
+  background: var(--gradient-gold);
+  border: none;
+  border-radius: 14px;
+  padding: 11px;
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# User-specified exclusions (Do NOT commit quote PDF, conversation text, or images)
+*.pdf
+converstation.txt
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+.user_uploaded/
+.tempmediaStorage/
+
+# Temporary / Scratch files
+scratch*
+.env
+.DS_Store

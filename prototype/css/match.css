@@ -1,0 +1,303 @@
+/* ========================================================
+   SCREEN 2: RANDOM VOICE MATCHING (LITMATCH RADAR)
+======================================================== */
+#screen-match {
+  background: radial-gradient(circle at 50% 35%, #1c1135 0%, #0c0a17 65%, #05050a 100%);
+  padding: 44px 16px 16px 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ========================================================
+   GUEST LOCK STATE (WHEN NOT LOGGED IN)
+======================================================== */
+.match-guest-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+  gap: 12px;
+}
+
+.match-lock-icon-outer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.12);
+  border: 2px dashed rgba(139, 92, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  margin-bottom: 4px;
+}
+
+.match-lock-icon-outer svg {
+  width: 36px;
+  height: 36px;
+  fill: var(--primary-purple);
+}
+
+.guest-lock-badge {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #c084fc;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.match-guest-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.match-guest-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  max-width: 290px;
+  margin-bottom: 10px;
+}
+
+.match-guest-login-btn {
+  width: 100%;
+  background: var(--gradient-match);
+  border: none;
+  border-radius: 16px;
+  padding: 13px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.match-guest-login-btn:active {
+  transform: scale(0.97);
+}
+
+/* ========================================================
+   ACTIVE MATCHING VIEW (WHEN LOGGED IN)
+======================================================== */
+.match-active-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-header-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-title h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, var(--primary-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.match-title p {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.daily-quota-pill {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #c084fc;
+}
+
+/* Pulsing Radar Arena */
+.radar-arena {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.radar-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  animation: radarWave 3s infinite linear;
+}
+
+.radar-ring:nth-child(1) { width: 110px; height: 110px; animation-delay: 0s; }
+.radar-ring:nth-child(2) { width: 175px; height: 175px; animation-delay: 0.9s; }
+.radar-ring:nth-child(3) { width: 240px; height: 240px; animation-delay: 1.8s; }
+
+@keyframes radarWave {
+  0% { transform: scale(0.6); opacity: 0.9; border-color: rgba(236, 72, 153, 0.6); }
+  50% { opacity: 0.4; border-color: rgba(139, 92, 246, 0.4); }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.radar-sweep-beam {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0deg, transparent 300deg, rgba(139, 92, 246, 0.35) 360deg);
+  animation: sweep 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.center-avatar-me {
+  position: relative;
+  z-index: 10;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--gradient-match);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  cursor: pointer;
+}
+
+.center-avatar-me img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0c0a17;
+}
+
+.radar-floating-user {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: floatOrb 3s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+.radar-floating-user img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.radar-floating-user.user-1 { top: 15px; left: 25px; animation-delay: 0.2s; }
+.radar-floating-user.user-2 { bottom: 25px; right: 20px; animation-delay: 0.8s; }
+.radar-floating-user.user-3 { top: 30px; right: 30px; animation-delay: 1.4s; }
+
+@keyframes floatOrb {
+  0% { transform: translateY(0) scale(0.95); }
+  100% { transform: translateY(-7px) scale(1.05); }
+}
+
+/* Match Filter Controls */
+.match-controls-box {
+  width: 100%;
+  background: rgba(22, 25, 38, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.filter-options {
+  display: flex;
+  gap: 6px;
+}
+
+.pill-option {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-option.active {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: var(--primary-purple);
+  color: #fff;
+}
+
+/* Call Launch Button */
+.start-matching-btn {
+  width: 100%;
+  background: var(--gradient-match);
+  border: none;
+  border-radius: 16px;
+  padding: 12px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.start-matching-btn:active {
+  transform: scale(0.97);
+}
+
+.start-matching-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
