@@ -11,15 +11,15 @@
 /* Fixed Header Bar at Top */
 .feed-header {
   position: absolute;
-  top: 44px;
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 40;
-  padding: 0 16px;
-  height: 42px;
+  padding: env(safe-area-inset-top, 8px) 16px 0 16px;
+  height: calc(52px + env(safe-area-inset-top, 0px));
   pointer-events: auto;
 }
 

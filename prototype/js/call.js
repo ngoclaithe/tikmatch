@@ -30,9 +30,6 @@ export function startVoiceCall() {
   clearInterval(callTimerInterval);
   updateTimerDisplay();
 
-  const dynamicIsland = document.getElementById('dynamic-island');
-  if (dynamicIsland) dynamicIsland.classList.add('call-active');
-
   callTimerInterval = setInterval(() => {
     callSecondsRemaining--;
     updateTimerDisplay();
@@ -46,9 +43,6 @@ export function startVoiceCall() {
 export function endVoiceCall() {
   clearInterval(callTimerInterval);
   callTimerInterval = null;
-
-  const dynamicIsland = document.getElementById('dynamic-island');
-  if (dynamicIsland) dynamicIsland.classList.remove('call-active');
 
   if (endCallCallback) endCallCallback();
 }

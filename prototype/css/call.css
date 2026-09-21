@@ -3,7 +3,7 @@
 ======================================================== */
 #screen-call {
   background: radial-gradient(circle at 50% 25%, #180d28 0%, #0d0917 60%, #06050b 100%);
-  padding: 50px 18px 24px 18px;
+  padding: max(20px, env(safe-area-inset-top, 20px)) 18px 24px 18px;
   display: none;
   flex-direction: column;
   justify-content: space-between;

@@ -62,14 +62,6 @@ export function switchScreen(targetScreenId) {
       n.classList.add('active');
     }
   });
-
-  // Handle Dynamic Island
-  const island = document.getElementById('dynamic-island');
-  if (island) {
-    if (targetScreenId === 'screen-call') {
-      island.classList.add('call-active');
-    }
-  }
 }
 
 // Auth State Controller (Synchronizes all 4 tabs)

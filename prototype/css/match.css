@@ -3,7 +3,7 @@
 ======================================================== */
 #screen-match {
   background: radial-gradient(circle at 50% 35%, #1c1135 0%, #0c0a17 65%, #05050a 100%);
-  padding: 44px 16px 16px 16px;
+  padding: max(16px, env(safe-area-inset-top, 16px)) 16px 16px 16px;
   height: 100%;
   overflow: hidden;
 }
