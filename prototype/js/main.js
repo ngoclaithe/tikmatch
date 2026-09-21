@@ -62,6 +62,22 @@ export function switchScreen(targetScreenId) {
       n.classList.add('active');
     }
   });
+
+  // When user opens Chat screen, dismiss unread notification badge
+  if (targetScreenId === 'screen-chat') {
+    updateNavBadge(false);
+  }
+}
+
+export function updateNavBadge(show) {
+  const badge = document.getElementById('chat-nav-badge');
+  if (badge) {
+    if (show) {
+      badge.classList.add('visible');
+    } else {
+      badge.classList.remove('visible');
+    }
+  }
 }
 
 // Auth State Controller (Synchronizes all 4 tabs)
@@ -71,6 +87,7 @@ function setAuthState(loggedIn) {
   updateFeedGuestState(isLoggedIn);
   updateMatchGuestState(isLoggedIn);
   updateChatGuestState(isLoggedIn);
+  updateNavBadge(isLoggedIn);
 
   if (isLoggedIn) {
     showToast(
@@ -114,14 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Dynamic Island tap: jump to call
-  const dynamicIsland = document.getElementById('dynamic-island');
-  if (dynamicIsland) {
-    dynamicIsland.addEventListener('click', () => {
-      switchScreen('screen-call');
-    });
-  }
 
   // 2. In-App Language Toggle Setup
   const langBtns = document.querySelectorAll('.inapp-lang-btn');
@@ -192,4 +201,5 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFeedGuestState(false);
   updateMatchGuestState(false);
   updateChatGuestState(false);
+  updateNavBadge(false);
 });

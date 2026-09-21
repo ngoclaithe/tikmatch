@@ -78,6 +78,11 @@
   padding: 1px 5px;
   border-radius: 10px;
   border: 1px solid #000;
+  display: none;
+}
+
+.nav-badge.visible {
+  display: block;
 }
 
 /* Dynamic Floating Toast (Only injected on explicit user actions, auto-destructs) */
